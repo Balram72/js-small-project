@@ -1,6 +1,5 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
-
 function addTask() {
   if (inputBox.value === "") {
     alert("You Must write Something !");
@@ -28,11 +27,9 @@ listContainer.addEventListener(
   },
   false
 );
-
 function saveData() {
   localStorage.setItem("data", listContainer.innerHTML);
 }
-
 function showTask() {
   listContainer.innerHTML = localStorage.getItem("data");
 }
